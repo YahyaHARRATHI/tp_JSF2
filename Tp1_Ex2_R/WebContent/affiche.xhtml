@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+
+xmlns:p="http://primefaces.org/ui"
+>
+<h:head>
+<title>Affichage</title>
+</h:head>
+<h:body>
+
+
+
+<div style="height:500px">
+    <h:form>
+        <p:growl id="msgs" showDetail="true" />
+ 
+    
+ 
+            <p:panel id="Loisir" header="Sports">
+                <h:outputText value="#{choixBean.loisir}" />
+            </p:panel>
+ 
+            <p:panel id="Gout" header="Finance">
+                <h:outputText value="#{choixBean.gout}" />
+            </p:panel>
+ 
+           
+      
+ 
+        <div style="clear:both" />
+    </h:form>
+</div>
+</h:body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:p="http://primefaces.org/ui" 
+>
+<h:head>
+<title>Page des choix</title>
+</h:head>
+<h:body>
+
+<h:form>
+    
+ 
+    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+       
+        <p:outputLabel  value=" Loisir : " />
+        <p:selectOneMenu id="city" value="#{choixBean.loisir}" effect="fold" editable="true">
+            <f:selectItem itemLabel="Foot" itemValue="foot" />
+            <f:selectItem itemLabel="Music" itemValue="music" />
+            <f:selectItem itemLabel="Roller" itemValue="roller" />
+         </p:selectOneMenu>
+ 
+ 		<p:outputLabel  value=" Gout : " />
+       <p:selectOneRadio  value="#{choixBean.gout}"  layout="grid" columns="1">
+             <f:selectItem itemLabel="Lait" itemValue="Lait" />
+            <f:selectItem itemLabel="Express" itemValue="Express" />
+        </p:selectOneRadio>
+   
+    </h:panelGrid>
+ 
+    <p:commandButton value="Submit"  action="#{choixBean.affiche}" icon="ui-icon-check" />
+ 
+   
+</h:form>
+        
+        
+</h:body>
+</html>
